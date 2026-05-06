@@ -1,0 +1,72 @@
+:root {
+    /*colors*/
+  --bg-black: #0a0f1c;
+  --dark-blue: #121a2b;
+  --teal-green: #00ff9f;
+  --blue: #00c3ff;
+  --white: #e6f1ff;
+  --grey-blue: #7a8ca5;
+  --red: #ff3b3b;
+  --yellow: #e59f09;
+  --indigo: #5A67D8;
+  /*fonts*/
+  --main-font: 'verdana', 'sans-serif';
+
+/*spacing scale*/
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 3rem;
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--dark-blue);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rbga(0,0,0,0.25)
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--font-main);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color:white ;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.5s;
+}
+
+.nav-links a:hover {
+    color: var(--indigo);
+}
+
+.nav-name {
+    color: #e6f1ff;
+    font-weight: bold;
+}
+
+h1 {
+    background-color: rgba(0, 255, 166, 0.482);
+    border-radius: 1.2rem;
+}
+
