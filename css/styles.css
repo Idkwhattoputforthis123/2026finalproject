@@ -1,14 +1,12 @@
 :root {
     /*colors*/
-  --bg-black: #0a0f1c;
-  --dark-blue: #121a2b;
-  --teal-green: #00ff9f;
-  --blue: #00c3ff;
-  --white: #e6f1ff;
-  --grey-blue: #7a8ca5;
-  --red: #ff3b3b;
-  --yellow: #e59f09;
-  --indigo: #5A67D8;
+  --black: #040F16;
+  --lime: #ABFF4F;
+  --teal: #1EA896;
+  --grey: #E8F1F2;
+  --red:  #EF233C;
+  --orange: #F18D5A;
+  --indigo: #2D3047;
   /*fonts*/
   --main-font: 'verdana', 'sans-serif';
 
@@ -20,12 +18,12 @@
 
 body {
     font-family: var(--main-font);
-    background-color: var(--white);
+    background-color: var();
     line-height: 1.6;
 }
 
 header {
-    background-color: var(--dark-blue);
+    background-color: var(--indigo);
     position: sticky;
     top: 0;
     left: 0;
@@ -50,14 +48,19 @@ header {
 }
 
 .nav-links a {
-    color:white ;
+    color: var(--grey);
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.5s;
+    transition: color 0.5s ease;
 }
 
+
+
 .nav-links a:hover {
-    color: var(--indigo);
+    color: var(--black);
+    background-color: var(--grey);
+    border-radius: 3px;
+    padding: 2px 2px 4px;
 }
 
 .nav-name {
@@ -68,5 +71,48 @@ header {
 h1 {
     background-color: rgba(0, 255, 166, 0.482);
     border-radius: 1.2rem;
+}
+
+.hero {
+    background-image: url('../images/cia1.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: var(--indigo);
+    z-index: 1;
+    padding: 2rem;
+}
+
+#hero::before {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 102, 0.65);
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
+     font-size: 1.4rem;
+     color: var(--font-main) var(--black);
+     margin-bottom: 1.5rem;
+     z-index: 1;
+     padding-top: 14rem;
+     font-weight: bold;
 }
 
