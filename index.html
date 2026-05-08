@@ -17,8 +17,8 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="#">CIA Triad</a></li>
-                <li><a href="#">Data States</a></li>
+                <li><a href="#cia-triad-cards">CIA Triad</a></li>
+                <li><a href="#data-section-card">Data States</a></li>
                 <li><a href="#">Auth (AAA)</a></li>
                 <li><a href="#">Passwords</a></li>
                 <li><a href="#">Hashing</a></li>
@@ -32,7 +32,7 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-            <h1>Understanding the CIA Triad <br> & Authentication</h1>
+            <h1>Understanding the CIA Triad & Authentication</h1>
 
             <h2>Computer & Information Science - Seaway Tech</h2>
 
@@ -41,8 +41,74 @@
                 know — Confidentiality, Integrity, Availability, and how we prove
                 who we are in a digital world.
             </p>
+            <button>Learn Authentication</button>
+            <button><a href="#cia-triad-cards">Explore The Triad</a></button>
             </div>
         </section>
+        <section id="cia-triad-cards">
+            <div class="cia-header">
+            <h2>The CIA Triad</h2>
+            <p>Data is a valuable asset. The primary goal of cybersecurity is to maintain three critical properties — collectively known as the CIA Triad — for all data, all the time.</p>
+            </div>
+            <div class="cia-cards">
+                <h2>Confidentiality</h2>
+                <h3>Data is not revealed</h3>
+                <p>Protection against unauthorized access. Only those with proper permission should ever be able to read or view the data.</p>
+                <p>Think of it as a locked diary — only the owner (or those granted access) can read it.
+                </p>
+                <mark>REAL-WORLD BREACH Edward Snowden's 2013 leak of classified NSA government data is a landmark example of a Confidentiality breach.</mark>
+            </div>
+            <div class="cia-cards">
+                <h2>Integrity</h2>
+                <h4>Data is intact - not modified or corrupted</h4>
+                <p>Protection against unauthorized modification. Data must
+remain accurate and trustworthy from the moment it is created
+until it is accessed.</p>
+                <p>
+                    If someone changes your grade in the grade book without
+permission, that's an Integrity breach.
+                </p>
+                <mark>REAL-WORLD BREACH The Stuxnet worm secretly altered code on Iranian centrifuge machines, causing them to spin too fast and physically break — a classic Integrity attack.</mark>
+            </div>
+            <div class="cia-cards">
+                <h2>Availability</h2>
+                <h3>Data is accessible to allowed users</h3>
+                <p>Protection against denial of service. Authorized users must be able to access data and systems whenever they legitimately
+need them.</p>
+<p>A website that is always down, or an account that stays locked,
+fails the Availability test.</p>
+<mark>The Mirai Botnet used 145,000+ infected cameras and devices
+to flood security journalist Brian Krebs' website with traffic,
+crashing it for 4 days — a textbook DDoS / Availability breach.</mark>
+            </div>
+            <div class="cia-card-footer">
+                <h3>Security Formula:</h3>
+                <p>Protection = Prevention + (Detection + Response). Every cybersecurity technique fits into at least one of these three elements, and every element maps back to the CIA Triad.</p>
+            </div>
+        </section>
+        <section id="data-section-cards">
+            <div class="data-card-header">
+                <h3>Protecting data</h3>
+                <h2>Protecting Data The Three States of Data</h2>
+                <p>To choose the right security tool, you need to know what state data is currently in. Data exists in one of three states at any given moment.</p>
+            </div>
+            <div class="data-cards">
+                <h2>Data in Transit</h2>
+                <p>Data actively moving from one system to another — through a network, the internet, or a local file share connection.</p>
+                <p class="example">Sending an email or uploading a file to the cloud.</p>
+            </div>
+            <div class="data-cards">
+                <h2>Data at Rest</h2>
+                <p>Information stored on hard drives, USB drives, DVDs, or memory — sitting still and not currently being moved or processed.</p>
+                <p class="example">Saved files on your laptop's hard drive.</p>
+            </div>
+            <div class="data-cards">
+                <h2>Data in Use</h2>
+                <p>Data currently being processed by an application, held in active RAM, or being created/edited by a user right now.</p>
+                <p class="example">A Word document you have open, or app data loaded in memory.</p>
+            </div>
+        </section>
+
     </main>
 
 </body>

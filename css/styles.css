@@ -56,11 +56,11 @@ header {
 
 
 
-.nav-links a:hover {
-    color: var(--black);
-    background-color: var(--grey);
-    border-radius: 3px;
-    padding: 2px 2px 4px;
+.nav-menu a:hover,
+.nav-menu:active{
+    background-color: #ff6600;
+    color: #1a1a1a;
+    transform: translateY(-3px);
 }
 
 .nav-name {
@@ -69,7 +69,6 @@ header {
 }
 
 h1 {
-    background-color: rgba(0, 255, 166, 0.482);
     border-radius: 1.2rem;
 }
 
@@ -77,22 +76,13 @@ h1 {
     background-image: url('../images/cia1.png');
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: 88vh;
     overflow: hidden;
 }
 
-.hero-content {
-    position: relative;
-    text-align: center;
-    color: var(--indigo);
-    z-index: 1;
-    padding: 2rem;
-}
-
-#hero::before {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+/* Dark overlay on the hero image for text readability */
+.hero::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -101,18 +91,95 @@ h1 {
     background: rgba(0, 51, 102, 0.65);
 }
 
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: #ffd700;
+    z-index: 1;
+    padding: 2rem;
+    
+}
+
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
 }
 
 .hero-content p {
      font-size: 1.4rem;
-     color: var(--font-main) var(--black);
+     color: var(--font-main) var(--grey);
      margin-bottom: 1.5rem;
      z-index: 1;
      padding-top: 14rem;
      font-weight: bold;
+     z-index: 100rem;
+     text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+     margin-top: -230px;
+     width: 35%;
+     margin-left: 15%;
 }
 
+.hero-content h2 {
+    text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    width: 50%;
+    margin-left: 15%;
+}
+
+button {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #3300ff;
+    color: var(--grey);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 76, 255, 0.676);
+}
+
+button:hover {
+    background-color: #0842ee;
+    transform: scale(1.1);
+}
+
+button a {
+    text-decoration: none;
+    color: var(--grey);
+}
+
+.cia-cards {
+    background: linear-gradient(130deg, #02ffee 0%, #130101 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgb(4, 201, 246);
+    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.3);
+}
+
+.cia-cards:hover {
+    transform: translateY(-10px) rotate(2deg);
+    box-shadow: 0 8px 25px rgba(0, 195, 255, 0.6);
+}
+
+mark {
+    background-color: #1EA896;
+}
+
+.cia-triad-header {}
