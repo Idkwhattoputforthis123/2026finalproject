@@ -18,9 +18,9 @@
 
             <ul class="nav-links">
                 <li><a href="#cia-triad-cards">CIA Triad</a></li>
-                <li><a href="#data-section-card">Data States</a></li>
-                <li><a href="#">Auth (AAA)</a></li>
-                <li><a href="#">Passwords</a></li>
+                <li><a href="#data-section-cards">Data States</a></li>
+                <li><a href="#AAA">Auth (AAA)</a></li>
+                <li><a href="#password">Passwords</a></li>
                 <li><a href="#">Hashing</a></li>
                 <li><a href="#">Auth Methods</a></li>
                 <li><a href="#">Contact</a></li>
@@ -51,28 +51,25 @@
             <p>Data is a valuable asset. The primary goal of cybersecurity is to maintain three critical properties — collectively known as the CIA Triad — for all data, all the time.</p>
             </div>
             <div class="cia-cards">
-                <h2>Confidentiality</h2>
-                <h3>Data is not revealed</h3>
+                <h3>Confidentiality</h3>
+                <b>Data is not revealed</b>
                 <p>Protection against unauthorized access. Only those with proper permission should ever be able to read or view the data.</p>
                 <p>Think of it as a locked diary — only the owner (or those granted access) can read it.
                 </p>
                 <mark>REAL-WORLD BREACH Edward Snowden's 2013 leak of classified NSA government data is a landmark example of a Confidentiality breach.</mark>
             </div>
             <div class="cia-cards">
-                <h2>Integrity</h2>
-                <h4>Data is intact - not modified or corrupted</h4>
-                <p>Protection against unauthorized modification. Data must
-remain accurate and trustworthy from the moment it is created
-until it is accessed.</p>
+                <h3>Integrity</h3>
+                <b>Data is intact - not modified or corrupted</b>
+                <p>Protection against unauthorized modification. Data must remain accurate and trustworthy from the moment it is created until it is accessed.</p>
                 <p>
-                    If someone changes your grade in the grade book without
-permission, that's an Integrity breach.
+                    If someone changes your grade in the grade book without permission, that's an Integrity breach.
                 </p>
                 <mark>REAL-WORLD BREACH The Stuxnet worm secretly altered code on Iranian centrifuge machines, causing them to spin too fast and physically break — a classic Integrity attack.</mark>
             </div>
             <div class="cia-cards">
-                <h2>Availability</h2>
-                <h3>Data is accessible to allowed users</h3>
+                <h3>Availability</h3>
+                <b>Data is accessible to allowed users</b>
                 <p>Protection against denial of service. Authorized users must be able to access data and systems whenever they legitimately
 need them.</p>
 <p>A website that is always down, or an account that stays locked,
@@ -93,22 +90,76 @@ crashing it for 4 days — a textbook DDoS / Availability breach.</mark>
                 <p>To choose the right security tool, you need to know what state data is currently in. Data exists in one of three states at any given moment.</p>
             </div>
             <div class="data-cards">
-                <h2>Data in Transit</h2>
+                <h3>Data in Transit</h3>
                 <p>Data actively moving from one system to another — through a network, the internet, or a local file share connection.</p>
                 <p class="example">Sending an email or uploading a file to the cloud.</p>
             </div>
             <div class="data-cards">
-                <h2>Data at Rest</h2>
+                <h3>Data at Rest</h3>
                 <p>Information stored on hard drives, USB drives, DVDs, or memory — sitting still and not currently being moved or processed.</p>
                 <p class="example">Saved files on your laptop's hard drive.</p>
             </div>
             <div class="data-cards">
-                <h2>Data in Use</h2>
+                <h3>Data in Use</h3>
                 <p>Data currently being processed by an application, held in active RAM, or being created/edited by a user right now.</p>
                 <p class="example">A Word document you have open, or app data loaded in memory.</p>
             </div>
+            <p>Different tools protect different states: Encryption for data at rest, secure protocols (HTTPS/TLS)for data in transit, and access controls &amp; authentication for data in use.</p>
         </section>
+        <section id="AAA">
+            <h2>The AAA Security Model</h2>
+            <h3>Authentication, Access Control &amp; Accounting</h3>
+            <h3>The AAA model describes the three tools used in practice to achieve the CIA Triad.</h3>
+            <div class="AAA-cards">
+            <h2>Authentication</h2>
+            <p>Prove who you are. Authentication is the establishment of trust between two parties. Without trust, information cannot safely be shared or accessed.</p>
+            </div>
+            <div class="AAA-cards">
+            <h2>Access Control</h2>
+            <p>What are you allowed to see or reach? Also called authorization or permissions. Not every authenticated user should access everything.</p>
+            </div>
+            <div class="AAA-cards">
+                <h2>Accounting</h2>
+                <p>Keep track of what happened. Also called auditing. Logs and records let us review activity, detect anomalies, and respond to incidents.</p>
+            </div>
+            <p>Something you know (password or PIN) Something you have (smart card, hardware token, code sent to your phone) Something you are (fingerprint, retina scan, voice)</p>
+        </section>
+        <section id="password">
+            <h3>Password Security</h3>
+            <h2>Password Attacks &amp; How to Defend Them</h2>
+            <p>Passwords are the most common - and most commonly attacked - form of authentication.</p>
+            <p>Understanding the attack types is the first step to building a solid defense.</p>
+            <div class="password-card">
+                <h3>Brute Force</h3>
+                <b>Method #1</b>
+                <p>Software that automatically tests every possible character combination until the correct password is found. Throughout but slow for complex passwords</p>
+            </div>
+            <div class="password-card">
+                <h3>Dictionary Attack</h3>
+                <b>Method #2</b>
+                <p>Uses a large database of common words, names, and character subsitiutions (like P@ssw)rd) to rapidly guess passwords. Much faster than pure brute force.</p>
+            </div>
+            <div class="password-card">
+                <h3>Password Spraying</h3>
+                <b>Method #3</b>
+                <p>Tests one weak password against many accounts. Avoid account lockouts because each account only receives one incorrect attempt.</p>
+            </div>
+            <div class="password-card">
+                <h3>Credential Stuffing</h3>
+                <b>Method #4</b>
+                <p>Uses stolen username/password pairs from a known breach to attack other sites.Effective because 52% of people reuse passwords across accounts</p>
+            </div>
+        </section>
+        <section id="table">
+            <h2>How Long to Brute Force Your Password?</h2>
+            <p>Estimated crack time based on password length and character types used.</p>
+            <p style="color: #85434f;">Red = Cracked Insantly</p>
+            <p style="color: #64836f";>Green = Extremley Safe</p>
+            <table class="table-brute">
+                <th>Estimated Brute Force Crack Time by Password Length &amp; Character Set.</th>
+            </table>
 
+        </section>
     </main>
 
 </body>
