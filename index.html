@@ -21,8 +21,8 @@
                 <li><a href="#data-section-cards">Data States</a></li>
                 <li><a href="#AAA">Auth (AAA)</a></li>
                 <li><a href="#password">Passwords</a></li>
-                <li><a href="#">Hashing</a></li>
-                <li><a href="#">Auth Methods</a></li>
+                <li><a href="#hash">Hashing</a></li>
+                <li><a href="#auth">Auth Methods</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
 
@@ -41,7 +41,7 @@
                 know — Confidentiality, Integrity, Availability, and how we prove
                 who we are in a digital world.
             </p>
-            <button>Learn Authentication</button>
+            <button><a href=""></a>Learn Authentication</a></button>
             <button><a href="#cia-triad-cards">Explore The Triad</a></button>
             </div>
         </section>
@@ -153,13 +153,225 @@ crashing it for 4 days — a textbook DDoS / Availability breach.</mark>
         <section id="table">
             <h2>How Long to Brute Force Your Password?</h2>
             <p>Estimated crack time based on password length and character types used.</p>
-            <p style="color: #85434f;">Red = Cracked Insantly</p>
-            <p style="color: #64836f";>Green = Extremley Safe</p>
             <table class="table-brute">
-                <th>Estimated Brute Force Crack Time by Password Length &amp; Character Set.</th>
+                <tr>
+                    <th>Estimated Brute Force Crack Time by Password Length &amp; Character Set.</th>
+                </tr>
+                <tr class="table-header">
+                    <th>#chars</th>
+                    <th>Numbers Only</th>
+                    <th>Lowercase only</th>
+                    <th>Upper &amp; Lower</th>
+                    <th>Numbers + Mixed Case</th>
+                    <th>Numbers + Mixed + Symbols</th>
+                </tr>
+                <tr class="table-data">
+                    <td>4</td>
+                    <td>Instantly</td>
+                    <td>Instantly</td>
+                    <td>Instantly</td>
+                    <td>Instantly</td>
+                    <td>Instantly</td>
+                </tr>
+                <tr class="table-data">
+                    <td>6</td>
+                    <td>Instantly</td>
+                    <td>Instantly</td>
+                    <td>Instantly</td>
+                    <td>1 sec</td>
+                    <td>5 sec</td>
+                </tr>
+                <tr class="table-data">
+                    <td>7</td>
+                    <td>Instantly</td>
+                    <td>Instantly</td>
+                    <td>25 sec</td>
+                    <td>1 min</td>
+                    <td>6 min</td>
+                </tr>
+                <tr class="table-data">
+                    <td>8</td>
+                    <td>Instantly</td>
+                    <td>5 sec</td>
+                    <td>22 min</td>
+                    <td>1 hour</td>
+                    <td>8 hours</td>
+                </tr>
+                <tr class="table-data">
+                    <td>9</td>
+                    <td>Instantly</td>
+                    <td>2 min</td>
+                    <td> 19 hours</td>
+                    <td>3 days</td>
+                    <td>3 weeks</td>
+                </tr>
+                <tr class="table-data">
+                    <td>10</td>
+                    <td>Instantly</td>
+                    <td>58 min</td>
+                    <td>1 month</td>
+                    <td>7 months</td>
+                    <td>5 years</td>
+                </tr>
+                <tr class="table-data">
+                    <td>11</td>
+                    <td>2 sec</td>
+                    <td>1 day</td>
+                    <td>5 years</td>
+                    <td>41 years</td>
+                    <td>400 years</td>
+                </tr>
+                <tr class="class-data">
+                    <td>12</td>
+                    <td>25 sec</td>
+                    <td>3 weeks</td>
+                    <td>300 years</td>
+                    <td>2,000 years</td>
+                    <td>34,000 years</td>
+                </tr>
+                <tr class="table-data">
+                    <td>15</td>
+                    <td>6 hours</td>
+                    <td>1,000 years</td>
+                    <td>43 million years</td>
+                    <td>600 million years</dr>
+                    <td>15 billion years</td>
+                </tr>
+                <tr class="table-data">
+                    <td>18+</td>
+                    <td>9 months</td>
+                    <td>23 million years</td>
+                    <td>6 trillion years</td>
+                    <td>100 trillion years</td>
+                    <td>7 quadtrillion years</td>
+                </tr>
             </table>
 
         </section>
+        <p><b>What hackers already know:</b> Capital letters are usally at the start, numbers are usally 1 or 2 at the start or end, women often choose personal names. And men often choose their favorite hobbies. Don't be perdictable - length and variety are your best defenses</p>
+        <section id="hash">
+            <h3>Password Storage</h3>
+            <h2>Password Hashing &amp; salting</h2>
+            <p>Passwords should never be stored as plain text. The most common safe storage method is hashing - a one way mathmatical transformation</p>
+            <div class="hash-card">
+            <h3>What is Hashing?</h3>
+            <b>ONE-WAY CONVERSION</b>
+            <p> A mathematical function converts a password into a fixed-length string called a hash. It is one-way — the original password cannot be recovered from the hash alone. Common algorithms: MD5, SHA-256, SHA-512 </p>
+        </div>
+
+        <div class="hash-card">
+        <h3>Rainbow Tables</h3>
+        <b>ATTACK METHOD</b>
+        <p>
+        A massive precomputed file of hash values for every possible    password.
+        Attackers look up a stolen hash to instantly find the   matching password —
+        no cracking required.
+        </p>
+</div>
+
+<div class="hash-card">
+  <h3>Salting</h3>
+  <b>DEFENSE METHOD</b>
+  <p>
+    A unique random string (a salt) is added to each password before hashing.
+    Even identical passwords produce different hashes, completely defeating
+    rainbow table lookups.
+  </p>
+</div>
+
+<div class="hash-card">
+  <h3>Pass-the-Hash</h3>
+  <b>ADVANCED ATTACK</b>
+  <p>
+    The attacker steals the hash directly from storage (Windows SAM hive or
+    Linux /etc/shadow) and uses it to authenticate — without ever knowing the
+    original password.
+  </p>
+</div>
+        </section>
+        <section class="auth">
+            <h3>Beyond Passwords</h3>
+            <h2>Methods of Authentication</h2>
+            <p>Modern Secuity has gone far beyond passwords. Here are the key authentication methods used in real world systems - and how combining them creates stronger protection.</p>
+             <div class="auth-cards">
+  <h3>Smart Cards</h3>
+  <b>SOMETHING YOU HAVE</b>
+  <p>
+    Cards with an embedded chip automatically recognized by an authentication
+    device. Proximity readers can detect them in a pocket or purse without
+    physical contact.
+  </p>
+</div>
+
+<div class="auth-cards">
+  <h3>Digital Certificates</h3>
+  <b>SOMETHING YOU HAVE</b>
+  <p>
+    Servers use certificates to authenticate with browsers (the padlock in your
+    address bar). Issued by trusted third-party Certificate Authorities (CAs).
+  </p>
+</div>
+
+<div class="auth-cards">
+  <h3>Biometrics</h3>
+  <b>SOMETHING YOU ARE</b>
+  <p>
+    Uses measurable physical characteristics: fingerprint, retina scan, voice,
+    or even typing speed. Disney World uses finger biometrics for multi-day
+    pass verification.
+  </p>
+</div>
+
+<div class="auth-cards">
+  <h3>Hardware Tokens (OTP)</h3>
+  <b>SOMETHING YOU HAVE</b>
+  <p>
+    A physical device generates a new One-Time Password (OTP) every 60 seconds.
+    Since each OTP is used exactly once, intercepting it is useless to an
+    attacker.
+  </p>
+</div>
+
+<div class="auth-cards">
+  <h3>Two-Factor Auth (2FA)</h3>
+  <b>KNOW + HAVE</b>
+  <p>
+    Combines two factors — such as a password plus a PIN sent to your phone
+    (like Google 2-Step Verification). One stolen factor alone is useless.
+  </p>
+</div>
+
+<div class="auth-cards">
+  <h3>Multi-Factor Auth (MFA)</h3>
+  <b>TWO OR MORE FACTORS</b>
+  <p>
+    Uses two or more different authentication factors. The gold standard for
+    account security — combining know, have, and/or are dramatically reduces
+    breach risk.
+  </p>
+</div>
+
+<div class="auth-cards">
+  <h3>Single Sign-On (SSO)</h3>
+  <b>ONE LOGIN, MANY RESOURCES</b>
+  <p>
+    One authentication grants access to many servers or services. Used widely
+    in schools and businesses to reduce password fatigue while maintaining
+    security.
+  </p>
+</div>
+
+<div class="auth-cards">
+  <h3>Passphrases</h3>
+  <b>SOMETHING YOU KNOW</b>
+  <p>
+    A string of multiple words offers more security than a complex password and
+    is easier to remember. Example: "The 3 little pigs say do not forget the
+    bacon!"
+  </p>
+</div>
+        </section>
+
     </main>
 
 </body>
