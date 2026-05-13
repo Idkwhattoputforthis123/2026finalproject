@@ -23,7 +23,7 @@
                 <li><a href="#password">Passwords</a></li>
                 <li><a href="#hash">Hashing</a></li>
                 <li><a href="#auth">Auth Methods</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
         </nav>
@@ -41,8 +41,10 @@
                 know — Confidentiality, Integrity, Availability, and how we prove
                 who we are in a digital world.
             </p>
-            <button><a href=""></a>Learn Authentication</a></button>
+            <div class="button-container">
+            <button><a href="#auth">Learn Authentication</a></button>
             <button><a href="#cia-triad-cards">Explore The Triad</a></button>
+            </div>
             </div>
         </section>
         <section id="cia-triad-cards">
@@ -50,6 +52,7 @@
             <h2>The CIA Triad</h2>
             <p>Data is a valuable asset. The primary goal of cybersecurity is to maintain three critical properties — collectively known as the CIA Triad — for all data, all the time.</p>
             </div>
+            <div class="cia-container">
             <div class="cia-cards">
                 <h3>Confidentiality</h3>
                 <b>Data is not revealed</b>
@@ -77,6 +80,7 @@ fails the Availability test.</p>
 <mark>The Mirai Botnet used 145,000+ infected cameras and devices
 to flood security journalist Brian Krebs' website with traffic,
 crashing it for 4 days — a textbook DDoS / Availability breach.</mark>
+            </div>
             </div>
             <div class="cia-card-footer">
                 <h3>Security Formula:</h3>
@@ -289,7 +293,7 @@ crashing it for 4 days — a textbook DDoS / Availability breach.</mark>
   </p>
 </div>
         </section>
-        <section class="auth">
+        <section id="auth">
             <h3>Beyond Passwords</h3>
             <h2>Methods of Authentication</h2>
             <p>Modern Secuity has gone far beyond passwords. Here are the key authentication methods used in real world systems - and how combining them creates stronger protection.</p>
@@ -371,8 +375,78 @@ crashing it for 4 days — a textbook DDoS / Availability breach.</mark>
   </p>
 </div>
         </section>
+        <section class="mini-auth">
+            <div class="mini-cards">
+            <h3>3 Ways to Stop Password Attacks</h3>
+            <b># 1 - Use strong passwords</b>
+            <p>Long passwords with mixed characters won't be in a dictionary and take too long to crack. 12+ characters all character typed.</p>
+            </div>
+            <div class="mini-cards">
+    <b>#2 - Enable Account Lockout</b>
+    <p>
+        Lock accounts after 3-5 failed attempts. This stops all automated brute
+        force, dictionary, and spraying attacks cold.
+    </p>
+</div>
 
+<div class="mini-cards">
+    <b>#3 - Enable MFA / 2FA</b>
+    <p>
+        Even if a password is stolen, an attacker still cannot log in without
+        your second factor. Enable it everywhere you can.
+    </p> 
+    </div>
+        </section>
+        <section id="contact">
+            <h3>Get in touch</h3>
+            <h2>Contact Us</h2>
+            <p>Have a question? Please ask using the form below.</p>
+            <form action="POST">
+        <div class="name-field">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name">
+        </div>
+        <div class="name-field">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name">
+        </div>
+        <div class="email">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+        </div>
+           <label for="topic">Topic</label>
+
+        <select id="topic" name="topic">
+            <option value="">Select a topic</option>
+            <option value="password-security">Password Security   </option>
+            <option value="mfa">Multi-Factor Authentication</option>
+            <option value="phishing">Rainbow Tables</option>
+            <option value="network-security">Network Security</option>
+            <option value="cyber-attacks">Cyber Attacks</option>
+        </select>
+
+            </form>
+        </section>
     </main>
-
+    <footer class="footer">
+        <h3>Cybersecurity Fundementals</h3>
+        <p>
+            CIA Triad &amp; Authentication
+        </p>
+        <p>
+            Computer &amp; Information Sciences - Seaway Tech
+        </p>
+        <em>content based on NIST Cybersecuirty Framework</em>
+        <nav class="footer-nav">
+            <p>Quick Links</p>
+            <li><a href="#cia-triad-cards">CIA Triad</a></li>
+                <li><a href="#data-section-cards">Data States</a></li>
+                <li><a href="#AAA">Auth (AAA)</a></li>
+                <li><a href="#password">Passwords</a></li>
+                <li><a href="#hash">Hashing</a></li>
+                <li><a href="#auth">Auth Methods</a></li>
+                <li><a href="#contact">Contact</a></li>
+        </nav>
+    </footer>
 </body>
 </html>

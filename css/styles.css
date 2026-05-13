@@ -44,7 +44,7 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .nav-links a {
@@ -58,9 +58,18 @@ header {
 
 .nav-menu a:hover,
 .nav-menu:active{
-    background-color: #ff6600;
+    background-color: #909ca4;
     color: #1a1a1a;
     transform: translateY(-3px);
+}
+
+.nav-links a:hover {
+    background-color: #e9aa16;
+    color: #1a1a1a;
+    border: 1px solid #1a1a1a;
+    transform: translateY(-3px);
+    border-radius: 0.5rem;
+    padding: 5px;
 }
 
 .nav-name {
@@ -137,10 +146,13 @@ h1 {
     width: 50%;
     margin-left: 15%;
 }
+.button-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
 
 button {
-    display: flex;
-    justify-content: flex-end;
     background-color: #3300ff;
     color: var(--grey);
     border: none;
@@ -162,10 +174,16 @@ button a {
     text-decoration: none;
     color: var(--grey);
 }
-
+.cia-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .cia-cards {
-    background: linear-gradient(130deg, #02ffee 0%, #130101 100%);
-    padding: 2rem;
+    background: linear-gradient(130deg, #02ffee 0%, #0d43b6 100%);
+    padding: 1rem;
+    width: 333px;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s ease;
@@ -174,7 +192,7 @@ button a {
 }
 
 .cia-cards:hover {
-    transform: translateY(-10px) rotate(2deg);
+    transform: translateY(-10px) ;
     box-shadow: 0 8px 25px rgba(0, 195, 255, 0.6);
 }
 
@@ -182,4 +200,10 @@ mark {
     background-color: #1EA896;
 }
 
-.cia-triad-header {}
+#cia-triad-cards {
+background-color: #a6d8ff;
+}
+
+.cia-triad-header {
+    
+}
