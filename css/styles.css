@@ -18,7 +18,8 @@
 
 body {
     font-family: var(--main-font);
-    background-color: var();
+    color: #1e6fa8;
+    background-color: #C3CED8;
     line-height: 1.6;
 }
 
@@ -201,9 +202,22 @@ mark {
 }
 
 #cia-triad-cards {
-background-color: #a6d8ff;
+
 }
 
-.cia-triad-header {
-    
+.cia-header p {
+         margin-bottom: 1.5rem;
+     z-index: 1;
+     padding-top: 14rem;
+     font-weight: bold;
+     z-index: 100rem;
+     margin-top: -230px;
+     width: 35%;
+     margin-left: 5%;
+     color: #72777a;
+     text-shadow: 5px black;
+}
+
+.cia-header h2 {
+ 
 }
