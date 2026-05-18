@@ -18,8 +18,8 @@
 
 body {
     font-family: var(--main-font);
-    color: #1e6fa8;
-    background-color: #C3CED8;
+    color: #2B2B2B;
+    background-color: #e5eaee;
     line-height: 1.6;
 }
 
@@ -214,10 +214,29 @@ mark {
      margin-top: -230px;
      width: 35%;
      margin-left: 5%;
-     color: #72777a;
+     color: #1F2933;
      text-shadow: 5px black;
 }
 
 .cia-header h2 {
- 
+ color: #1F2933;
+ text-indent: 6rem;
 }
+
+.cia-cards{
+    color: #1F2933;
+    margin-bottom: 20px; 
+}
+
+.cia-card-footer {
+    background: rgba(99, 209, 216, 0.5);
+    border: 2px solid #08316a;
+  
+    padding: 10px 18px;
+    border-radius: 8px;
+
+    font-weight: bold;
+    display: inline-block;
+    text-indent: 2rem;
+}
+
